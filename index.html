@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+  <html lang="ru">
+    <head>       
+      <meta charset="utf-8">
+      <link href="styles.css" rel="stylesheet">       
+      <title>PopUp for Dima aka god of the verstka</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">	  
+    </head>	   
+    <body class="page">  
+      <div class="main page__main">
+        <button class="main__button button button--modal" id="myBtn">Нажми меня Пупсек!</button>
+        <div id="modal" class="modal">
+          <div class="modal-content modal__content">
+            <span class="modal__close" id="modal-close">&times</span>
+            <form action="post" class="form">
+              <div class="form__cell">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name">
+              </div>
+              <div class="form__cell">
+                <label for="pass">Ваш пароль</label>
+                <input type="password" id="pass">
+              </div>
+              <button class="button form__cell">Отправь меня</button>
+            </form>
+          </div>
+        </div>
+      </div>     
+    <script src="scripts/popup.js"></script>
+    </body>

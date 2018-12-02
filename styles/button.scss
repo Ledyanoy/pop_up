@@ -1,0 +1,13 @@
+.button {      
+    cursor: pointer;   
+    &--modal {
+        padding: 10px;
+        color: $white-color;
+        background-color: $orange-color;    
+        font-size: 20px;
+        font-weight: bold;
+        border: 1px solid $grey-button-color;
+        box-shadow: none;
+        border-radius: 15px;
+    }
+}
