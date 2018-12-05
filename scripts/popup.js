@@ -3,16 +3,22 @@ var btn = document.getElementById('myBtn');
 var close = document.getElementById('modal-close');
 
 btn.onclick = function() {
-    modal.classList.add("modal--active")
+    modal.classList.add('modal--active')
 };
 
 close.onclick = function() {
-    modal.classList.remove("modal--active")
+    modal.classList.remove('modal--active')
 };
 
 window.onclick = function(evt) {
-    if (evt.target == modal) {
-        modal.classList.remove("modal--active")
+    if (evt.target !== modal) {
+        return 
     }
-}
+    modal.classList.remove('modal--active')    
+};
 
+document.addEventListener('keydown', function (esc) {
+    if(esc.keyCode === 27) {
+        modal.classList.remove('modal--active')
+    }
+}); 

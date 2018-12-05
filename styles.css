@@ -110,3 +110,8 @@ input {
 .form__cell {
   width: 80%;
   margin: 0 auto; }
+
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%; }
