@@ -3,7 +3,7 @@ var btn = document.getElementById('myBtn');
 var close = document.getElementById('modal-close');
 
 btn.onclick = function() {
-    modal.classList.add('modal--active')
+    modal.classList.add('modal--active');    
 };
 
 close.onclick = function() {
@@ -23,9 +23,22 @@ document.addEventListener('keydown', function (esc) {
     }
 });
 
-function checkBtn() {
-  var input1 = document.getElementById('name');
-  var input2 = document.getElementById('pass'); 
-  var formButton = document.getElementById('form-button');
-  formButton.disabled = input1.value && input2.value ? false : "disabled";
-}  
+var input1 = document.getElementById('name');
+var input2 = document.getElementById('pass');
+var formButton = document.getElementById('form-button');
+
+input1.oninput = function (evt) {    
+     evt = checkBtn()
+};
+
+input2.oninput = function (evt) {    
+    evt = checkBtn()
+};
+
+function checkBtn() {  
+  formButton.disabled = !(input1.value && input2.value);
+};
+
+
+var iner1 = input1.value;
+console.log(iner1);
