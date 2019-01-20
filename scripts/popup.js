@@ -28,7 +28,7 @@ var input2 = document.getElementById('pass');
 var formButton = document.getElementById('form-button');
 
 input1.oninput = function (evt) {    
-     evt = checkBtn()
+     evt = checkBtn();    
 };
 
 input2.oninput = function (evt) {    
@@ -39,6 +39,18 @@ function checkBtn() {
   formButton.disabled = !(input1.value && input2.value);
 };
 
+formButton.onclick = function() {
+    localStorage.setItem('firstInput', input1.value);  
+}  
+    
 
-var iner1 = input1.value;
-console.log(iner1);
+window.onload = function() {
+    var nameInput = localStorage.getItem('firstInput');
+    if (nameInput !== null) {        
+        input1.value = nameInput;
+    } else  {
+        alert('не заполнял еще!')
+    }
+}
+
+
